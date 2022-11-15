@@ -18,17 +18,17 @@ namespace Dice_Game
                 Console.WriteLine("Press any key to roll the dice");
                 Console.ReadKey();
                 playerRandomNumber = random.Next(1, 7);
-                Console.WriteLine("You rolled" + playerRandomNumber);
+                Console.WriteLine("You rolled " + playerRandomNumber);
 
                 Console.WriteLine("...");
                 System.Threading.Thread.Sleep(1000);
 
                 enemyRandomNumber = random.Next(1, 7);
-                Console.WriteLine("Opposition rolled" + enemyRandomNumber);
+                Console.WriteLine("Opposition rolled " + enemyRandomNumber);
            
                 if(playerRandomNumber > enemyRandomNumber)
                 {
-                    playerPoint = playerPoint + 1;
+                    playerPoint++;
                     Console.WriteLine("You win this round");
                 }  else if (playerRandomNumber < enemyRandomNumber) {
                     enemyPoint++;
@@ -37,6 +37,9 @@ namespace Dice_Game
                 {
                     Console.WriteLine("Its a Draw");
                 }
+
+
+                _ = (playerPoint > enemyPoint) ? "YOU WON THE MATCH" : "YOU LOOSE";
 
             }
 
