@@ -6,6 +6,7 @@ namespace Dice_Game
     {
         static void Main(string[] args)
         {
+            //creating a random dice game with 10 rounds
             int playerRandomNumber;
             int enemyRandomNumber;
 
